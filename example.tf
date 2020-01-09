@@ -1,6 +1,6 @@
 provider "aws" {
   profile    = "default"
-  region     = "us-west-2"
+  region     = "us-east-1"
 }
 resource "aws_s3_bucket" "example" {
   # NOTE: S3 bucket names must be unique across _all_ AWS accounts, so
