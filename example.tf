@@ -17,5 +17,4 @@ resource "aws_instance" "example" {
 
   # Tells Terraform that this EC2 instance must be created only after the
   # S3 bucket has been created.
-  depends_on = [aws_s3_bucket.example]
 }
