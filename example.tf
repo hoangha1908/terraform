@@ -8,4 +8,7 @@ resource "aws_instance" "example" {
   instance_type = "t1.micro"
   key_name = "hoangha2"
 }
-resource "
+resource "aws_eip" "ip" {
+    vpc = true
+    instance = aws_instance.example.id
+}
