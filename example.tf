@@ -11,10 +11,4 @@ resource "aws_s3_bucket" "example" {
 }
 
 # Change the aws_instance we declared earlier to now include "depends_on"
-resource "aws_instance" "example" {
-  ami           = "ami-2757f631"
-  instance_type = "t2.micro"
 
-  # Tells Terraform that this EC2 instance must be created only after the
-  # S3 bucket has been created.
-}
