@@ -5,10 +5,10 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami           = "ami-062f7200baf2fa504"
   instance_type = "t2.micro"
-  key_name = aws_key_pair.example.hoangha2
+  key_name = "hoangha2"
    connection {
     type     = "ssh"
-    user     = "root"
+    user     = "ec2-user"
     private_key = file("~/.ssh/id_rsa")
     host     = self.ip
   }
