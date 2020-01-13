@@ -15,8 +15,8 @@ resource "aws_instance" "example" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo yum -y install httpd",
-      "sudo systemctl start httpd"
+      "yum -y install httpd",
+      "systemctl start httpd"
     ]
   }
 }
