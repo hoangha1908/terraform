@@ -11,12 +11,5 @@ resource "aws_instance" "example" {
     user     = "ec2-user"
     private_key = file("~/.ssh/hoangha2.ppk")
     host     = self.public_ip
-  }
-
-  provisioner "remote-exec" {
-    inline = [
-      "yum -y install httpd",
-      "systemctl start httpd"
-    ]
-  }
+  } 
 }
