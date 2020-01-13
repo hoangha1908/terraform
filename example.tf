@@ -15,14 +15,8 @@ resource "aws_instance" "example" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo amazon-linux-extras enable nginx1.12",
-      "sudo yum -y install nginx",
-      "sudo systemctl start nginx"
+      "sudo yum -y install httpd",
+      "sudo systemctl start httpd"
     ]
   }
 }
-
-resource "aws_key_pair" "example" {
-  key_name = "hoangha2"
-  public_key = file("~/.ssh/id_rsa.pub")
-} 
