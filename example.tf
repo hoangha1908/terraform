@@ -9,7 +9,7 @@ resource "aws_instance" "example" {
    connection {
     type     = "ssh"
     user     = "ec2-user"
-    private_key = file("~/.ssh/id_rsa")
+    private_key = file("~/.ssh/hoangha2.ppk")
     host     = self.public_ip
   }
 
