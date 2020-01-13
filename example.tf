@@ -10,7 +10,7 @@ resource "aws_instance" "example" {
     type     = "ssh"
     user     = "ec2-user"
     private_key = file("~/.ssh/id_rsa")
-    host     = self.ip
+    host     = self.public_ip
   }
 
   provisioner "remote-exec" {
