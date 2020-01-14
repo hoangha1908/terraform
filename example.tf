@@ -13,3 +13,6 @@ resource "aws_instance" "example" {
     host     = self.public_ip
   } 
 }
+output "ip" {
+  value = aws_instance.example.public_ip
+}
