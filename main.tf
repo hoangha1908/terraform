@@ -27,7 +27,7 @@ locals {
 }
 
 module "Bastion"{
-  source = "./modules/Instance"
+  source = "./Instance"
   ami_id = "${data.aws_ami.ubuntu_lastest.id}" 
   instance_type = "t2.micro"
   key= "${local.keyname}"
