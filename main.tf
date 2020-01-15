@@ -3,20 +3,6 @@ provider "aws" {
    region     = local.AZ1
 }
 
-# Collect the lastest amazon ami
-data "aws_ami" "ubuntu_lastest"{
-  most_recent = true
-  owners = ["099720109477"]
-  filter{
-    name ="name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"]
-  }
-  filter{
-    name = "virtualization-type"
-    values = ["hvm"]
-  }
-}
-
 locals {
   # Environment variable
   project="hoangha"
@@ -29,7 +15,7 @@ locals {
 
 module "Bastion"{
   source = "./Instance"
-  ami_id = "${data.aws_ami.ubuntu_lastest.id}" 
+  ami_id = "ami-062f7200baf2fa504" 
   instance_type = "t2.micro"
   key= "${local.keyname}"
   publicip="true"
