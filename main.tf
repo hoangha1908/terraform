@@ -1,5 +1,6 @@
 provider "aws" {
    profile    = "default"
+   region     = local.AZ1
 }
 
 # Collect the lastest amazon ami
