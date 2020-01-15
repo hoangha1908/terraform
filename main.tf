@@ -17,7 +17,7 @@ module "Bastion"{
   source = "./Instance"
   ami_id = "ami-062f7200baf2fa504" 
   instance_type = "t2.micro"
-  key= "${local.keyname}"
+  key= local.keyname
   publicip="true"
   name = "bastion"
 }
