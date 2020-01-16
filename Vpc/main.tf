@@ -36,7 +36,7 @@ resource "aws_subnet" "subnet_private_1a" {
   availability_zone = var.AZa
 
   tags = {
-      Name = "${var.project}-subnet-public-a-${var.environment}"
+      Name = "${var.project}-subnet-private-a-${var.environment}"
       Environment = var.environment
   }
 }
@@ -46,7 +46,7 @@ resource "aws_subnet" "subnet_private_1b" {
   availability_zone = var.AZb
  
   tags = {
-      Name = "${var.project}-subnet-public-b-${var.environment}"
+      Name = "${var.project}-subnet-private-b-${var.environment}"
       Environment = var.environment
   }
 }

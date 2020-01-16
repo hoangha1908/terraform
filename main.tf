@@ -5,7 +5,7 @@ provider "aws" {
 
 locals {
   # Environment variable
-  project="sky_premium"
+  project="sky-premium"
   environment="stg"
   cidr_block="10.0.0.0/16"
   region="us-east-1"
