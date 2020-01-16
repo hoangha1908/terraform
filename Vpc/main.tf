@@ -5,7 +5,7 @@ resource "aws_vpc" "vpc" {
   enable_classiclink = false
   instance_tenancy = default
   tags {
-         Name = var.project."-".environment."-vpc"
+         Name = "${var.project}-vpc-${environment}"
          Environment = var.environment
        }
 }
