@@ -5,7 +5,7 @@ provider "aws" {
 
 locals {
   # Environment variable
-  project="sky-premium"
+  project="sky_premium"
   environment="stg"
   cidr_block="10.0.0.0/16"
   AZ1="us-east-1"
@@ -28,7 +28,7 @@ module "Bastion"{
 module "Vpc" {
   source = "./Vpc"
   cidr_block = local.cidr_block
-  providers = local.project
+  project = local.project
   environment = local.environmentu  
 }
 
