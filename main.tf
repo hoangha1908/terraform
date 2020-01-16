@@ -29,7 +29,6 @@ module "Vpc" {
   source = "./Vpc"
   cidr_block = local.cidr_block
   providers = local.project
-  environment = local.environment
-  
+  environment = local.environmentu  
 }
 
