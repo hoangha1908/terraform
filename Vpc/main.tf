@@ -78,19 +78,19 @@ resource "aws_route_table" "route_table_private" {
       Environment = var.environment
   }
 }
-resource "aws_route_tables_association" "Association_subnet_public_a" {
+resource "aws_route_table_association" "Association_subnet_public_a" {
    subnet_id = aws_subnet.subnet_public_1a.id
    route_table_id = aws_route_table.route_table_public.id
 }
-resource "aws_route_tables_association" "Association_subnet_public_b" {
+resource "aws_route_table_association" "Association_subnet_public_b" {
    subnet_id = aws_subnet.subnet_public_1b.id
    route_table_id = aws_route_table.route_table_public.id
 }
-resource "aws_route_tables_association" "Association_subnet_private_a" {
+resource "aws_route_table_association" "Association_subnet_private_a" {
    subnet_id = aws_subnet.subnet_private_1a.id
    route_table_id = aws_route_table.route_table_private.id
 }
-resource "aws_route_tables_association" "Association_subnet_private_b" {
+resource "aws_route_table_association" "Association_subnet_private_b" {
    subnet_id = aws_subnet.subnet_private_1b.id
    route_table_id = aws_route_table.route_table_private.id
 }
