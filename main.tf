@@ -1,6 +1,6 @@
 provider "aws" {
    profile    = "default"
-   region     = local.AZ1
+   region     = local.region
 }
 
 locals {
@@ -8,8 +8,11 @@ locals {
   project="sky_premium"
   environment="stg"
   cidr_block="10.0.0.0/16"
-  AZ1="us-east-1"
-  AZ2="us-east-2"
+  region="us-east-1"
+  AZa="us-east-1a"
+  AZb="us-east-1b"
+  AZc="us-east-1c"
+  AZd="us-east-1d"
   IP-Guest="0.0.0.0/32"
   keyname="hoangha2"
 
@@ -29,6 +32,9 @@ module "Vpc" {
   source = "./Vpc"
   cidr_block = local.cidr_block
   project = local.project
-  environment = local.environment  
+  environment = local.environment
+  AZa="us-east-1a"
+  AZb="us-east-1b"
+
 }
 

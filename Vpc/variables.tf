@@ -8,4 +8,12 @@ variable "environment" {
   
 }
 
+variable "AZa" {
+  
+}
+variable "AZb" {
+  
+}
+
+
 
