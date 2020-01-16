@@ -3,7 +3,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_support = true
   enable_dns_hostnames = true
   enable_classiclink = false
-  instance_tenancy = default
+  instance_tenancy = "default"
   tags {
          Name = "${var.project}-vpc-${environment}"
          Environment = var.environment

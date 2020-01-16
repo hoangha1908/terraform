@@ -29,6 +29,6 @@ module "Vpc" {
   source = "./Vpc"
   cidr_block = local.cidr_block
   project = local.project
-  environment = local.environmentu  
+  environment = local.environment  
 }
 
