@@ -1,4 +1,4 @@
-resource "aws_vpc" "${var.project}-vpc-${var.environment}" {
+resource "aws_vpc" "$${var.project}-vpc-$${var.environment}" {
   cidr_block = var.cidr_block
   enable_dns_support = true
   enable_dns_hostnames = true
